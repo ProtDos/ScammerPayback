@@ -1,0 +1,40 @@
+<p>Terst</p>
+
+<script>
+// Collect visitor information
+const visitorInfo = {
+  userAgent: window.navigator.userAgent,
+  language: window.navigator.language,
+  screenResolution: `${window.screen.width}x${window.screen.height}`,
+  browser: {
+    name: window.navigator.appName,
+    version: window.navigator.appVersion,
+    platform: window.navigator.platform,
+    cookiesEnabled: window.navigator.cookieEnabled
+  },
+  location: {
+    href: window.location.href,
+    protocol: window.location.protocol,
+    host: window.location.host,
+    pathname: window.location.pathname,
+    search: window.location.search
+  }
+};
+
+fetch('/receive-visitor-info', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(visitorInfo)
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log(data.message); // Message from the Flask app
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
+console.log(visitorInfo);
+</script>
