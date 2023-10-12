@@ -206,7 +206,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 CodingLive - [@codinglive](https://discord.com/users/786495827827752990) - [@xoding](https://t.me/xoding) - rootcode@duck.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: https://github.com/ProtDos/ScammerPayback
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
